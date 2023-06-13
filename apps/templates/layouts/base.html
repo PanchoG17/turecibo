@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="title" content="SGD - TuRecibo">
+    <meta name="author" content="SGD">
+
+    <link type="text/css" href="{% static 'css/styles.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'plugins/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'plugins/font-awesome/css/all.min.css' %}" rel="stylesheet">
+    <link type="text/css" href="{% static 'plugins/data-tables/css/datatables.min.css' %}" rel="stylesheet">
+    <link type='image/x-icon' href="{% static 'favicon.ico' %}" rel='shortcut icon'/>
+
+    {% block stylesheets %}{% endblock stylesheets %}
+</head>
+<body>
+
+    {% block header %}{% endblock %}
+
+    <main>
+      {% block content %}{% endblock content %}
+    </main>
+
+  <script src="{% static 'plugins/jquery/js/jquery-3.6.1.min.js' %}"></script>
+  <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.js' %}"></script>
+  <script src="{% static 'plugins/data-tables/js/datatables.min.js' %}"></script>
+
+  {% block javascripts %}{% endblock javascripts %}
+
+</body>
+</html>

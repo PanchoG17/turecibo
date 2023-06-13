@@ -1,0 +1,64 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %} Recibo Digital | Ingresar {% endblock %}
+
+{% block content %}
+
+    <div class="bg-login d-flex align-items-center pt-5 mt-4">
+        <div class="col-xl-3 col-lg-5 col-md-6 col-sm-7 col-9 mx-auto">
+            <h4 class="text-center text-white">Consulta tu recibo digital</h4>
+            <div class="card">
+                <img class="card-img-top" src="{% static 'img/logo_01.png' %}" alt="logo gobierno">
+                {% for message in messages %}
+                    <div class="text-danger text-center px-1">
+                        <small>{{ message|safe }}</small>
+                    </div>
+                {% endfor %}
+                <div class="card-body">
+                    <h5 class="card-title text-center">Inicio de sesión</h5>
+                    <form method="POST">
+                        {% if msg %}<div class="text-danger text-center">{{msg}}</div>{% endif %}
+                        {% csrf_token %}
+                        <div class="text-danger text-center">{{form.username.errors}}</div>
+                        <div class="input-group my-4">
+                            <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                            {{form.username}}
+                        </div>
+                        <div class="input-group my-4">
+                            <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
+                            {{form.password1.errors}}
+                            {{form.password1}}
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100"><i class="fa-solid fa-arrow-right-to-bracket me-2"></i>Ingresar</button>
+                    </form>
+                </div>
+                <div class="pointer card-footer text-center text-sm text-danger py-3" data-bs-toggle="modal" data-bs-target="#ayudaModal">
+                    <small><i class="fa-regular fa-circle-question me-2"></i>Ayuda al usuario</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ayudaModal" tabindex="-1" aria-labelledby="ayudaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ayudaModalLabel">Ayuda al usuario</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <small>
+                        <p>Comuniquese por correo para solicitar usuario y clave o pedir el restablecimiento de la misma a:</p>
+                        <p class="text-danger">mesadeayuda@tierradelfuego.gov.ar</p>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %} {% endblock %}
+
+

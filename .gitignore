@@ -1,0 +1,8 @@
+__pycache__/
+env
+tmp
+media/difusion/*
+staticfiles
+core/db2.py
+core/db.py
+debug.log

@@ -1,0 +1,50 @@
+[
+    {
+        "model": "recibo.tipooperacion", "pk": 1,
+        "fields": {"titulo": "Ingreso exitoso"}
+    },
+    {
+        "model": "recibo.tipooperacion", "pk": 2,
+        "fields": {"titulo": "Ingreso fallido"}
+    },
+    {
+        "model": "recibo.tipooperacion", "pk": 3,
+        "fields": {"titulo": "Salida exitosa"}
+    },
+    {
+        "model": "recibo.tipooperacion", "pk": 4, 
+        "fields": {"titulo": "Registro exitoso"}
+    },
+    {
+        "model": "recibo.tipooperacion", "pk": 5, 
+        "fields": {"titulo": "Ver recibo"}
+    },
+    {
+        "model": "recibo.tipooperacion", "pk": 6, 
+        "fields": {"titulo": "Descargar recibo"}
+    },
+    {
+        "model": "recibo.tipooperacion", "pk": 7, 
+        "fields": {"titulo": "Enviar mail recibo"}
+    },
+    {
+        "model": "recibo.tipooperacion", "pk": 8,  
+        "fields": {"titulo": "Enviar mail recibo BTF"}
+    },
+        {
+        "model": "recibo.tipooperacion", "pk": 9, 
+        "fields": {"titulo": "Actualizacion de datos"}
+    },
+    {
+        "model": "recibo.datosadicionales", "pk": 1, 
+        "fields": {
+                "usuario": 1,
+                "nombre": "admin",
+                "apellido": "admin", 
+                "documento": 123456789, 
+                "email": null, 
+                "telefono": null, 
+                "fecha_ultima_modificacion": "2022-12-18T13:19:38.045Z"
+        }
+    }
+]
